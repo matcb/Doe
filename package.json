@@ -1,0 +1,25 @@
+{
+  "name": "doe",
+  "version": "1.0.0",
+  "description": "\"A web app for blood donation\"",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "doe"
+  },
+  "keywords": [
+    "doacao",
+    "doe"
+  ],
+  "author": "matheus",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.2",
+    "nunjucks": "^3.2.0"
+  }
+}

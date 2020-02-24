@@ -1,0 +1,79 @@
+<!DOCTYPE Html>
+<!---Crtl + a | Ctrl + k | Ctrl + f = formatacao--->
+<html>
+
+<head>
+    <title>DOE SANGUE! DOE VIDA! </title>
+        <link href="style.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+    <header>
+        
+        <h2><img src="/Doe/public/logo.png"></h2>
+        <h2>A sua doação importa</h2>
+        <p>Até 3 vidas podem ser salvas com 1 doação. </p>
+        <p>Mais de 38.000 doações são necessárias todos os dias.</p>
+        <p>Apenas 1,9% da população brasileira, doa sangue.</p>
+
+        <button>Quero ajudar</button>
+    </header>
+    
+   <section class="form">
+       <h2>Entre na lista de doares !</h2>
+        <form action="/" method="POST">
+            <input 
+            type="text" 
+            name="name"
+            placeholder="Nome completo"
+            >
+
+            <input 
+            type="email"
+            name="email"
+            placeholder="Email"
+            >
+
+            <input
+            type="text"
+            name="blood"
+            placeholder="Tipo sanguineo"
+            >
+
+            <button>Quero ajudar</button>
+        </form>
+
+   </section>
+   
+    <main>
+        <h2>Últimos <span>doadores</span></h2>
+        <section class="donors">
+            <!-- Review the CSS, cos it not appear in the page -->
+            {% for donor in donors %}
+            
+                <div class="donor">
+                    <div class="blood">AB+</div>
+                    <p>Matheus</p>
+                </div>
+
+            {%endfor%}            
+
+
+
+        </section>
+    </main>
+    
+    <footer>
+        Rodapé
+    </footer>
+
+    <script src="script.js"></script>
+    
+
+    
+
+
+</body>
+
+</html>

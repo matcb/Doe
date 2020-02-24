@@ -1,0 +1,170 @@
+/*Global*/
+*
+{
+    /*attention here..correcting a default property. with it, the padding stay in the 
+    border limits*/
+    box-sizing: border-box; 
+}
+html,body
+{
+    margin:0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    background-color: #f7f4f4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ 
+
+/*Header*/
+header h1, main h2
+{
+    margin-bottom: 70px;
+
+}
+main h2 span
+{
+    color:#ff4f4f;
+}
+
+header button
+{
+    margin-top: 20px;
+    padding:8px 16px;
+    border-radius: 4px;
+    background-color:#ff4f4f;
+    color: white;
+    font-weight: bold;
+    border: none; /*delete the border that looks like a shadow :s*/
+}
+header, main, footer
+{
+
+    text-align:center;
+
+}
+
+header, .form, main
+{
+    /*Espaçamentos com margin*/
+    margin:0 auto 70px;
+    /*Aplicando limites aos elementos da página com width e height*/
+    width:90%;
+    max-width: 500px;
+
+}
+
+
+/*Main, section.donors*/
+.donors
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+.blood p
+{
+    color:#ff4f4f;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /*?*/
+    position:relative; /*?*/
+    justify-content: center; /*?*/
+
+}
+.blood::before /*creating a pseudo element with css in our index.html*/
+{
+    content:"" ;
+    background-color: #ff4f4f11;
+    width:40px;
+    height:40px;
+    position: absolute;
+    /*Doing the drop of water*/
+    border-radius: 50%;              /*Arredondando*/
+    border-top-right-radius: 0;      /*afinando o topo*/
+    transform: rotate(-45deg);       /*rotacionando*/
+}
+/*FORM*/
+section.form
+{
+ display: grid;
+ grid-template-columns: 1fr 1fr ;
+ grid-gap:45px;
+ align-items: center;
+ background-color: #ff4f4f;
+ padding:16px 64px;
+ border-radius: 13px;
+ transition:all 300ms;
+ 
+}
+
+.form h2
+{
+    text-align: right;
+   color:#ffffffee;
+}
+
+form input, form button
+{
+    
+    width:100%;
+    /*space*/
+    margin-bottom: 4px;
+    /*padding*/
+    padding: 8px 16px;
+    /*Borders*/
+    border-radius: 4px; /*round borders*/
+    border:2px #ffffff88 solid;
+
+}
+form input
+{
+    background-color: transparent;
+
+}
+form input::placeholder
+{
+    color: #ffffffaa;
+}
+
+form button
+{
+    font-weight: bold;
+}
+
+
+
+
+/*footer*/
+
+.donor p 
+{
+    
+    margin-top:24px;
+    margin-bottom: 64px;
+    font-size:14px;
+}
+
+footer
+{
+    margin-top: auto;
+    padding: 16px;
+    border-top:1px solid #ff4f4f;
+    font-weight: bold;
+    color: #000000ff;
+
+}
+
+/*JS FEATURES*/
+section.form.hide
+{
+    opacity: 0;
+    visibility: hidden;
+    height:0;
+    margin-top: -70px;
+}
